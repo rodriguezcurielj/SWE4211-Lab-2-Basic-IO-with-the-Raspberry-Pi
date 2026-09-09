@@ -1,0 +1,38 @@
+[
+{
+  "directory": "/home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/build",
+  "command": "/usr/bin/arm64-g++ --sysroot=/rpi_sysroot --sysroot=/rpi_sysroot  -I/home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/src/gpio/provided -I/home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/src/tasking/provided -isystem /rpi_sysroot/usr/local/include -std=c++11 -g   -Wall -g -O3 -L/rpi_sysroot/usr/local/lib -lwiringPi -lpthread -std=c++11 -o CMakeFiles/lab2part5.dir/Lab2Part4.cpp.o -c /home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/src/Lab2Part4.cpp",
+  "file": "/home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/src/Lab2Part4.cpp",
+  "output": "CMakeFiles/lab2part5.dir/Lab2Part4.cpp.o"
+},
+{
+  "directory": "/home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/build",
+  "command": "/usr/bin/arm64-g++ --sysroot=/rpi_sysroot --sysroot=/rpi_sysroot  -I/home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/src/gpio/provided -I/home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/src/tasking/provided -isystem /rpi_sysroot/usr/local/include -std=c++11 -g   -Wall -g -O3 -L/rpi_sysroot/usr/local/lib -lwiringPi -lpthread -std=c++11 -o CMakeFiles/lab2part5.dir/gpio/provided/GPIO.cpp.o -c /home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/src/gpio/provided/GPIO.cpp",
+  "file": "/home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/src/gpio/provided/GPIO.cpp",
+  "output": "CMakeFiles/lab2part5.dir/gpio/provided/GPIO.cpp.o"
+},
+{
+  "directory": "/home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/build",
+  "command": "/usr/bin/arm64-g++ --sysroot=/rpi_sysroot --sysroot=/rpi_sysroot  -I/home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/src/gpio/provided -I/home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/src/tasking/provided -isystem /rpi_sysroot/usr/local/include -std=c++11 -g   -Wall -g -O3 -L/rpi_sysroot/usr/local/lib -lwiringPi -lpthread -std=c++11 -o CMakeFiles/lab2part5.dir/gpio/provided/LgpioGPIO.cpp.o -c /home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/src/gpio/provided/LgpioGPIO.cpp",
+  "file": "/home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/src/gpio/provided/LgpioGPIO.cpp",
+  "output": "CMakeFiles/lab2part5.dir/gpio/provided/LgpioGPIO.cpp.o"
+},
+{
+  "directory": "/home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/build",
+  "command": "/usr/bin/arm64-g++ --sysroot=/rpi_sysroot --sysroot=/rpi_sysroot  -I/home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/src/gpio/provided -I/home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/src/tasking/provided -isystem /rpi_sysroot/usr/local/include -std=c++11 -g   -Wall -g -O3 -L/rpi_sysroot/usr/local/lib -lwiringPi -lpthread -std=c++11 -o CMakeFiles/lab2part5.dir/gpio/provided/WiringPiGPIO.cpp.o -c /home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/src/gpio/provided/WiringPiGPIO.cpp",
+  "file": "/home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/src/gpio/provided/WiringPiGPIO.cpp",
+  "output": "CMakeFiles/lab2part5.dir/gpio/provided/WiringPiGPIO.cpp.o"
+},
+{
+  "directory": "/home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/build",
+  "command": "/usr/bin/arm64-g++ --sysroot=/rpi_sysroot --sysroot=/rpi_sysroot  -I/home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/src/gpio/provided -I/home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/src/tasking/provided -isystem /rpi_sysroot/usr/local/include -std=c++11 -g   -Wall -g -O3 -L/rpi_sysroot/usr/local/lib -lwiringPi -lpthread -std=c++11 -o CMakeFiles/lab2part5.dir/tasking/provided/GenericThreadInfo.cpp.o -c /home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/src/tasking/provided/GenericThreadInfo.cpp",
+  "file": "/home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/src/tasking/provided/GenericThreadInfo.cpp",
+  "output": "CMakeFiles/lab2part5.dir/tasking/provided/GenericThreadInfo.cpp.o"
+},
+{
+  "directory": "/home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/build",
+  "command": "/usr/bin/arm64-g++ --sysroot=/rpi_sysroot --sysroot=/rpi_sysroot  -I/home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/src/gpio/provided -I/home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/src/tasking/provided -isystem /rpi_sysroot/usr/local/include -std=c++11 -g   -Wall -g -O3 -L/rpi_sysroot/usr/local/lib -lwiringPi -lpthread -std=c++11 -o CMakeFiles/lab2part5.dir/tasking/provided/RunnableClass.cpp.o -c /home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/src/tasking/provided/RunnableClass.cpp",
+  "file": "/home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/src/tasking/provided/RunnableClass.cpp",
+  "output": "CMakeFiles/lab2part5.dir/tasking/provided/RunnableClass.cpp.o"
+}
+]

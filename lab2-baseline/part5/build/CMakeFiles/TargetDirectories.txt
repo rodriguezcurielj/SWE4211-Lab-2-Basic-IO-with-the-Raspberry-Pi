@@ -1,0 +1,3 @@
+/home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/build/CMakeFiles/lab2part5.dir
+/home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/build/CMakeFiles/edit_cache.dir
+/home/swestudent/SWE4211-Lab-2-Basic-IO-with-the-Raspberry-Pi/lab2-baseline/part5/build/CMakeFiles/rebuild_cache.dir

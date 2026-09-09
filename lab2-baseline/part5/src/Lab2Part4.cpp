@@ -1,38 +1,43 @@
 /**
- * @file
- * @author  <Place your name here>
- * @version 2.0
-  * @section DESCRIPTION
- *
- * This program will allow the user to control a light.
- * The light will be controlled by pressing and releasing a pushbutton.
- */
+* @file
+* @author  Lihui Mei
+* @version 3.0
+* @section DESCRIPTION
+*
+* This program will allow the user to control a light.
+* The light will be controlled by pressing and releasing a pushbutton.
+* Turns LED D2 on when pushbutton S1 is pressed, off when released.
+*/
 
 #include "GPIO.h"
 #include <iostream>
 #include <unistd.h>
+#include <wiringPi.h>
+#include "WiringPiGPIO.h"
 #include <sys/mman.h>
 
 using namespace SWE4211RPi;
 using namespace std;
 
-/**
- * This program will control the LED.  It essentially will turn the LED on if the button is pressed and off if the button is released.
- */
 int main(int argc, char *argv[]) {
 	// Check to determine if the command line usage is correct or not.
 	if (argc != 4) {
 		std::cerr << "Usage: " << argv[0]
-				<< " <Output GPIO Pin Number> <Input GPIO Pin Number> <Sleep period in milliseconds>";
+			<< " <led_bcm_pin> <button_bcm_pin> <sample_period_in_ms>" << std::endl;
 		exit(-1);
 	}
-	// Print out your name and your lab partners name to the console at the start of the program.
-	// TODO
 
+	// Print out your name and your lab partner's name to the console at the start of the program.
+	cout << "Lab 2: Lihui Mei and Jose Rodriguez Curiel" << endl;
 
 	// Setup the operating thread to be a real time thread.
 	struct sched_param p;
-	p.__sched_priority = sched_get_priority_max(SCHED_FIFO) > 70 ? 70 : sched_get_priority_max(SCHED_FIFO) - 10;
+	int maxPriority = sched_get_priority_max(SCHED_FIFO);
+	if (maxPriority == -1) {
+		std::cerr << "Failed to query max scheduler priority" << std::endl;
+		exit(-1);
+	}
+	p.__sched_priority = (maxPriority > 70) ? 70 : (maxPriority - 10);
 
 	// Lock memory and prefault the stack. A page fault mid-run stalls a transition,
 	// and it'll show up as an outlier in your data.
@@ -43,36 +48,44 @@ int main(int argc, char *argv[]) {
 		exit(-1);
 	}
 
-
-	// Determine the GPIO pin numbers and sleep time.
+	// Determine the GPIO pin numbers and sleep time.  Argument order matches
+	// the python script: LED pin, button pin, sample period in ms.
 	int gpioOutPin = atoi(argv[1]);
 	int gpioInPin = atoi(argv[2]);
 	int sleepPeriodinms = atoi(argv[3]);
 
 	// Instantiate a new instance of a GPIO port to act as a GPIO output port.
-	// TODO
+	// Start with the LED off (active low -> HIGH means off).
+	WiringPiGPIO outPin(gpioOutPin, GPIO::DIRECTION::GPIO_OUT, GPIO::VALUE::GPIO_HIGH);
 
 	// Instantiate a new instance of a GPIO port to act as a GPIO input port.
-	// TODO
+	WiringPiGPIO inPin(gpioInPin, GPIO::DIRECTION::GPIO_IN);
 
+	// The WiringPiGPIO wrapper does not enable the internal pull-up resistor
+	// when configuring a pin as input, so the button pin floats and reads
+	// unreliably.  We are not permitted to modify WiringPiGPIO.cpp (it's a
+	// provided file), so we enable the pull-up here directly using the raw
+	// wiringPi call.  By this point wiringPiSetupGpio() has already run
+	// inside the WiringPiGPIO constructor, so this is safe to call.
+	pullUpDnControl(gpioInPin, PUD_UP);
 
-	// Loop forever.  (Well, until the Ctrl-C is pressed.)
+	// Loop forever.  (Well, until Ctrl-C is pressed.)
 	while (1 == 1) {
-		// Read the input pin.  If the pin is low,
-		// TODO
+		// Pull-up configuration: button released -> pin reads HIGH,
+		// button pressed -> pin reads LOW.
+		// LED is active low: LOW turns it on, HIGH turns it off.
+		if (inPin.getValue() == GPIO::GPIO_LOW) {
+			// Button pressed -> turn LED on.
+			outPin.setValue(GPIO::GPIO_LOW);
+		} else {
+			// Button released -> turn LED off.
+			outPin.setValue(GPIO::GPIO_HIGH);
+		}
 
-			// then turn the light on.
-		// TODO
-		// else
-		// TODO
-			// else if the pin is not low, Turn the light off.
-		// TODO
-
-		// If the sleep time is not zero, go to sleep for the appropriate amount of time.
-		if (sleepPeriodinms!=0)
-		{
-			// Cause the thread to sleep for a given period of time.
-			// TODO
+		if (sleepPeriodinms != 0) {
+			usleep(sleepPeriodinms * 1000);
 		}
 	}
+
+	return 0;
 }
