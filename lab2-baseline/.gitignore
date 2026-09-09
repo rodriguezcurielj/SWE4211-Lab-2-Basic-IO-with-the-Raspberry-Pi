@@ -1,0 +1,73 @@
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+part2/build/.cproject
+part2/build/.gitignore
+part2/build/.project
+part2/build/cmake_install.cmake
+part2/build/CMakeCache.txt
+part2/build/lab2part2
+part2/build/Makefile
+part2/build/CMakeFiles/cmake.check_cache
+part2/build/CMakeFiles/CMakeDirectoryInformation.cmake
+part2/build/CMakeFiles/feature_tests.bin
+part2/build/CMakeFiles/feature_tests.cxx
+part2/build/CMakeFiles/Makefile.cmake
+part2/build/CMakeFiles/Makefile2
+part2/build/CMakeFiles/progress.marks
+part2/build/CMakeFiles/TargetDirectories.txt
+part2/build/CMakeFiles/3.13.4/CMakeCXXCompiler.cmake
+part2/build/CMakeFiles/3.13.4/CMakeDetermineCompilerABI_CXX.bin
+part2/build/CMakeFiles/3.13.4/CMakeSystem.cmake
+part2/build/CMakeFiles/3.13.4/CompilerIdCXX/CMakeCXXCompilerId.cpp
+part2/build/CMakeFiles/lab2part2.dir/build.make
+part2/build/CMakeFiles/lab2part2.dir/cmake_clean.cmake
+part2/build/CMakeFiles/lab2part2.dir/CXX.includecache
+part2/build/CMakeFiles/lab2part2.dir/depend.internal
+part2/build/CMakeFiles/lab2part2.dir/depend.make
+part2/build/CMakeFiles/lab2part2.dir/DependInfo.cmake
+part2/build/CMakeFiles/lab2part2.dir/flags.make
+part2/build/CMakeFiles/lab2part2.dir/link.txt
+part2/build/CMakeFiles/lab2part2.dir/progress.make
+part4/build/.cproject
+part4/build/.project
+part4/src/.project
+part4/build/CMakeFiles/lab2part4.dir/build.make
+part4/build/lab2part4
+part4/build/CMakeFiles/
+part4/build/.settings/
+part4/build/Makefile
+part2/build/CMakeFiles/
+part2/build/.settings/
+part4/build/CMakeCache.txt
+part4/build/cmake_install.cmake
+part2/src/.project
