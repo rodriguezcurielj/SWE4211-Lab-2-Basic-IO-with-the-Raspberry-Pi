@@ -28,6 +28,7 @@ using namespace std;
  */
 int main(int argc, char* argv[])
 {
+	cout << "Lab 2: Lihui Mei and Jose Rodriguez Curiel" << endl;
 	// Check to determine if the command line usage is correct or not.
 	if (argc != 4)
 	{
