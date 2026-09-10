@@ -1,0 +1,25 @@
+[package]
+name = "lab2part6"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+# 0.13 predates Raspberry Pi 5 / RP1 support. 0.22 covers every Pi through the
+# Pi 5, CM5 and 500.
+rppal = "0.22"
+libc = "0.2"
+ctrlc = "3.4"
+
+[profile.release]
+opt-level = 3
+lto = "fat"
+codegen-units = 1
+panic = "abort"
+# Debug symbols cost nothing at runtime and keep perf and gdb useful.
+debug = true
+
+# A debug build is not a meaningful latency measurement. If this will ever be
+# run under `cargo run` without --release, this keeps the numbers honest.
+[profile.dev]
+opt-level = 1
+
